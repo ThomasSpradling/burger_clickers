@@ -663,7 +663,7 @@
 		
 		function update() {
 			let elapsedTime = Date.now() - startedAt;
-			localStorage.score = Number(localStorage.score) + Number(localStorage.auto)*elapsedTime/100;
+			localStorage.score = Number(localStorage.score) + Number(localStorage.auto)*elapsedTime/10;
 			start();
 		}
 		
