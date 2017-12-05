@@ -660,7 +660,7 @@
 		setInterval(() => {
 			localStorage.score = Number(localStorage.score) + Number(localStorage.auto);
 		}, 100);
-		document.documentElement.onunload = function() {
+		document.documentElement.onbeforeunload = function() {
 			localStorage.time = Date.now();
 		}
 		addBuild(0, 0, "Burger Grill", "click" , 1, 50, "homemade");
