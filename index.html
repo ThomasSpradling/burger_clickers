@@ -591,13 +591,13 @@
 					if (type === "click") {
 						buy.onclick = () => {
 							localStorage[storage] = Number(localStorage[storage]) + 1;
-							localStorage.clickValue = Number(localStorage.clickValue) + value * Math.pow(1.2, Number(localStorage[storage] - 1));
+							localStorage.clickValue = Number(localStorage.clickValue) + value * Math.pow(1.15, Number(localStorage[storage] - 1));
 							localStorage.score = Number(localStorage.score) - Math.floor(cost * Math.pow(1.15, Number(localStorage[storage]) - 1));
 						};
 					} else if (type === "auto") {
 						buy.onclick = () => {
 							localStorage[storage] = Number(localStorage[storage]) + 1;
-							localStorage.auto = Number(localStorage.auto) + (value * Math.pow(1.2, Number(localStorage[storage] - 1)))/10;
+							localStorage.auto = Number(localStorage.auto) + (value * Math.pow(1.15, Number(localStorage[storage] - 1)))/10;
 							localStorage.score = Number(localStorage.score) - Math.floor(cost * Math.pow(1.15, Number(localStorage[storage]) - 1));
 						};
 					}
