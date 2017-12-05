@@ -235,7 +235,7 @@
 
 	</style>
 </head>
-<body onbeforeunload="localStorage.timme = Date.now();" onload="open = Date.now();">
+<body>
 	<audio autoplay loop>
 	  <source src="krustykrab.m4a" type="audio/mpeg">
 	  	<div class="audio-alt">
@@ -251,7 +251,6 @@
 	<div id="click"></div>
 	<span id="auto"></span>
 	<script type="text/javascript">
-		var open;
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
 		  	var abbr;
@@ -668,11 +667,6 @@
 			localStorage.score = Number(localStorage.score) + Number(localStorage.auto)*elapsedTime/100;
 		}
 		setInterval(start, 100);
-		var elapsed;
-		document.body.onload = () => {
-			elapsed = localStorage.timme - open;
-			alert(elapsed);
-		}
 		
 		addBuild(0, 0, "Burger Grill", "click" , 1, 50, "homemade");
 		addBuild(1, 0, "Uncle Burg", "click", 5, 500, "uncle");
