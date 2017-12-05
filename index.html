@@ -660,9 +660,20 @@
 		setInterval(() => {
 			localStorage.score = Number(localStorage.score) + Number(localStorage.auto);
 		}, 100);
-		document.documentElement.onbeforeunload = function() {
-			localStorage.time = 500;
-		};
+		
+		var startedAt;
+		
+		function start() {
+			startedAt = Date.now();
+			updateTarget();
+			requestAnimationFrame(update);
+		}
+		
+		function update() {
+			let elapsedTime = Date.now() - startedAt;
+			console.log(elapsedTime);
+		}
+		
 		alert(localStorage.time);
 		addBuild(0, 0, "Burger Grill", "click" , 1, 50, "homemade");
 		addBuild(1, 0, "Uncle Burg", "click", 5, 500, "uncle");
