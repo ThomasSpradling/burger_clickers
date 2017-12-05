@@ -654,12 +654,6 @@
 			document.getElementById('click').innerHTML = "Burgers Per Click: " + bigNum(localStorage.click, 2, false);
 			document.getElementById('auto').innerHTML = "Burgers Per Second: " + bigNum(localStorage.auto * 10, 2, false);
 		}, 10);
-
-		
-
-		setInterval(() => {
-			localStorage.score = Number(localStorage.score) + Number(localStorage.auto);
-		}, 100);
 		
 		var startedAt;
 		
@@ -671,6 +665,7 @@
 		function update() {
 			let elapsedTime = Date.now() - startedAt;
 			console.log(elapsedTime);
+			localStorage.score = (Number(localStorage.score) + Number(localStorage.auto))*elapsedTime/100;
 		}
 		start();
 		addBuild(0, 0, "Burger Grill", "click" , 1, 50, "homemade");
