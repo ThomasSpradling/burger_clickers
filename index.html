@@ -664,8 +664,8 @@
 		function update() {
 			let elapsedTime = Date.now() - startedAt;
 			localStorage.score = Number(localStorage.score) + Number(localStorage.auto)*elapsedTime/100;
+			start();
 		}
-		setInterval(start, 100);
 		
 		addBuild(0, 0, "Burger Grill", "click" , 1, 50, "homemade");
 		addBuild(1, 0, "Uncle Burg", "click", 5, 500, "uncle");
