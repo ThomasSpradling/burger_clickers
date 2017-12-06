@@ -667,7 +667,7 @@
 			start();
 		}
 		start();
-		addBuild(0, 0, "Burger Grill", "click" , 5, 1, "homemade");
+		addBuild(0, 0, "Burger Grill", "click" , 5, 1, "one");
 		addBuild(1, 0, "Uncle Burg", "auto", 250, 22, "uncle");
 		addBuild(2, 0, "Burger Printer", "auto", 4000, 225, "printer");
 		addBuild(3, 0, "Burger Farm", "auto", 1e5, 3725, "farm");
@@ -680,6 +680,10 @@
 		addBuild(2, 2, "Burger Altar", "auto", 3e17, 4.914e13, "altar");
 		addBuild(3, 2, "Burger Alchemy", "auto", 3.500e20, 3.112e16, "alchemy");
 		addBuild(0, 3, "Burger Universe", "auto", 4.200e24, 2.027e20, "universe");
+		if(localStorage.homemade) {
+			localStorage.one = localStorage.homemade;
+			localStorage.homemade = undefined;
+		}	
 	</script>
 </body>
 </html>
