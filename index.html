@@ -629,10 +629,6 @@
 				} else {
 					buy.disabled = true;
 				}
-				extras.onclick = () => {
-					extrasList.style.top = "-215%";
-					extrasList.style.opacity = "0.9";
-				};
 			});
 			if (!localStorage[storage]) {
 				localStorage[storage] = 0;
@@ -666,6 +662,11 @@
 			var extrasList = document.createElement("div");
 			extrasList.className = "extras-menu";
 			div.appendChild(extrasList);
+			
+			extras.onclick = () => {
+				extrasList.style.top = "-215%";
+				extrasList.style.opacity = "0.9";
+			};
 			
 			var datum = document.createElement("div");
 			datum.className = "extras-menu";
