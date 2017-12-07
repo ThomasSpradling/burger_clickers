@@ -684,6 +684,11 @@
 					extrasList.className = "extras-menu";
 			}, 10);
 			
+			extrasList.onclick = () => {
+				this.style.bottom = "-240%";
+				this.style.opacity = 0;
+			};
+			
 			extras.onclick = () => {
 				extrasList.style.top = "-215%";
 				extrasList.style.opacity = "0.9";
