@@ -666,7 +666,7 @@
 				currentDmg = value * Math.pow(1.1, Number(i - 1))*10;
 			}
 			let nextDmg;
-			for(let i = 0; i < localStorage[storage]; i++) {
+			for(let i = 0; i <= localStorage[storage]; i++) {
 				nextDmg = value * Math.pow(1.1, Number(i))*10;
 			}
 			extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
