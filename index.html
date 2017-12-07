@@ -629,9 +629,6 @@
 				} else {
 					buy.disabled = true;
 				}
-				extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
-				"<span class='dmg'>"+damgeType+": "+bigNum(currentDmg, 2, true)+" Next: "+bigNum(nextDmg, 2, true)+"</span>";
-				extrasList.className = "extras-menu";
 			});
 			if (!localStorage[storage]) {
 				localStorage[storage] = 0;
@@ -665,13 +662,20 @@
 			var extrasList = document.createElement("div");
 			let damgeType = type === "click"?"bpc":"bps";
 			let currentDmg;
-			for(let i = 1; i <= localStorage[storage]; i++) {
-				currentDmg = value * Math.pow(1.1, Number(i))*10;
-			}
 			let nextDmg;
-			for(let i = 1; i <= localStorage[storage]; i++) {
-				nextDmg = value * Math.pow(1.1, Number(i + 1))*10;
-			}
+			setInterval(() => {
+				for(let i = 1; i <= localStorage[storage]; i++) {
+					currentDmg = value * Math.pow(1.1, Number(i))*10;
+				}
+
+				for(let i = 1; i <= localStorage[storage]; i++) {
+					nextDmg = value * Math.pow(1.1, Number(i + 1))*10;
+				}
+
+				extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
+					"<span class='dmg'>"+damgeType+": "+bigNum(currentDmg, 2, true)+" Next: "+bigNum(nextDmg, 2, true)+"</span>";
+					extrasList.className = "extras-menu";
+			}, 10);
 			
 			extras.onclick = () => {
 				extrasList.style.top = "-215%";
