@@ -253,7 +253,8 @@
 			height: 100%;
 			top: -420%;
 			left: 0;
-			background-color: rgba(0,0,0,0.8);
+			background-color: black;
+			opacity: 0;
 			transition: 0.3s;
 		}
 	</style>
@@ -629,6 +630,7 @@
 				}
 				extras.onclick = () => {
 					extrasList.style.top = "-215%";
+					extrasList.style.opacity = "0.9";
 				};
 			});
 			if (!localStorage[storage]) {
