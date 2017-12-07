@@ -666,8 +666,8 @@
 				currentDmg = value * Math.pow(1.1, Number(i - 1))*10;
 			}
 			let nextDmg;
-			for(let b = 1; i <= localStorage[storage]; b++) {
-				nextDmg = value * Math.pow(1.1, Number(b))*10;
+			for(let i = 1; i <= localStorage[storage]; i++) {
+				nextDmg = value * Math.pow(1.1, Number(i))*10;
 			}
 			extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
 			"<span class='dmg'>"+damgeType+": "+bigNum(currentDmg, 2, true)+" Next: "+bigNum(nextDmg, 2, true)+"</span>";
