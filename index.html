@@ -628,6 +628,9 @@
 				} else {
 					buy.disabled = true;
 				}
+				extras.onclick = () => {
+					extrasList.top = "210%";
+				};
 			});
 			if (!localStorage[storage]) {
 				localStorage[storage] = 0;
@@ -661,10 +664,6 @@
 			var extrasList = document.createElement("div");
 			extrasList.className = "extras-menu";
 			div.appendChild(extrasList);
-			
-			extras.onclick = () => {
-				extrasList.top = "210%";
-			};
 
 			var tool = document.createElement("div");
 			tool.innerHTML = name;
