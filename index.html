@@ -603,7 +603,10 @@
 		if (!localStorage.score) {
 			localStorage.score = 0;
 		}
-		var click = 1;
+		var click;
+		if(!click) {
+			click = 1;
+		}
 		if (!localStorage.auto) {
 			localStorage.auto = 0;
 		}
