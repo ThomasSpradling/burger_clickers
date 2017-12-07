@@ -662,11 +662,11 @@
 			var extrasList = document.createElement("div");
 			let damgeType = type === "click"?"bpc":"bps";
 			let currentDmg;
-			for(let i = 0; i <= localStorage[storage] + 1; i++) {
+			for(let i = 1; i <= localStorage[storage] + 1; i++) {
 				currentDmg = value * Math.pow(1.1, Number(i - 1))*10;
 			}
 			let nextDmg;
-			for(let i = 0; i <= localStorage[storage] + 1; i++) {
+			for(let i = 1; i <= localStorage[storage] + 1; i++) {
 				nextDmg = value * Math.pow(1.1, Number(i))*10;
 			}
 			extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
