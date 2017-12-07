@@ -603,9 +603,7 @@
 		if (!localStorage.score) {
 			localStorage.score = 0;
 		}
-		if (!localStorage.clickValue) {
-			localStorage.clickValue = 1;
-		}
+		var click = 1;
 		if (!localStorage.auto) {
 			localStorage.auto = 0;
 		}
@@ -623,7 +621,7 @@
 					if (type === "click") {
 						buy.onclick = () => {
 							localStorage[storage] = Number(localStorage[storage]) + 1;
-							localStorage.clickValue = Number(localStorage.clickValue) + value * Math.pow(1.1, Number(localStorage[storage] - 1));
+							click = Number(click) + value * Math.pow(1.1, Number(localStorage[storage] - 1));
 							localStorage.score = Number(localStorage.score) - Math.floor(cost * Math.pow(1.15, Number(localStorage[storage]) - 1));
 						};
 					} else if (type === "auto") {
@@ -711,12 +709,11 @@
 
 		
 		setInterval(() => {
-			localStorage.click = localStorage.clickValue;
 			score.innerHTML = bigNum(localStorage.score, 2, false);
 			burger.onclick = () => {
-				localStorage.score = Number(localStorage.score) + Number(localStorage.click);
+				localStorage.score = Number(localStorage.score) + Number(click);
 			}
-			document.getElementById('click').innerHTML = "Burgers Per Click: " + bigNum(localStorage.click, 2, false);
+			document.getElementById('click').innerHTML = "Burgers Per Click: " + bigNum(click, 2, false);
 			document.getElementById('auto').innerHTML = "Burgers Per Second: " + bigNum(localStorage.auto * 10, 2, false);
 		}, 10);
 		
