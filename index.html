@@ -244,7 +244,16 @@
 			border-radius: 5px;
 		}
 		.extras:hover {
-			background-color: #853;
+			background-color: #dc9e73;
+		}
+		
+		.extras-menu {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			top: -190%;
+			left: 0;
+			background-color: rgba(0,0,0,0.8);
 		}
 
 	</style>
@@ -647,6 +656,10 @@
 			var extras = document.createElement("div");
 			extras.className = "extras";
 			div.appendChild(extras);
+			
+			var extrasList = document.createElement("div");
+			extrasList.className = "extras-menu";
+			div.appendChild(extrasList);
 
 			var tool = document.createElement("div");
 			tool.innerHTML = name;
