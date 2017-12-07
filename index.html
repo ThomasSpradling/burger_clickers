@@ -232,6 +232,17 @@
 			display: block;
 			text-shadow: -1px 1px 0 white;
 		}
+		
+		.extras {
+			position: relative;
+			left: 500px;
+			top: -200%;
+			border: 2px solid #853;
+			border-radius: 5%;
+			width: 32px;
+			height: 32px;
+			background-image: url("Images/elipses.png");
+		}
 
 	</style>
 </head>
@@ -629,6 +640,10 @@
 			var buy = document.createElement("button");
 			buy.className = 'buy';
 			div.appendChild(buy);
+			
+			var extras = document.createElement("div");
+			extras.className = "extras";
+			div.appendChild(extras);
 
 			var tool = document.createElement("div");
 			tool.innerHTML = name;
