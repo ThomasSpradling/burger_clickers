@@ -412,6 +412,15 @@
 		  -ms-transform: translateX(26px);
 		  transform: translateX(26px);
 		}
+		
+		#fake-burger {
+			width: 256px;
+			height: 256px;
+			background: url('Images/unclicked.png');
+		}
+		fake-burger:active {
+			background: url('Images/clicked.png');
+		}
 	</style>
 </head>
 <body>
@@ -441,6 +450,7 @@
 	</div>
 	<button id="stats" class="fa fa-bar-chart"></button>
 	<div id="stats-box">
+		<div id="fake-burger"></div>
 		<h1>Statistics/Analysis</h1>
 		<div id="close-stats" class="fa fa-close fa-3x"></div>
 	</div>
