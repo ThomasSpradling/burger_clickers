@@ -323,7 +323,7 @@
 		
 		#settings-box {
 			position: absolute;
-			top: -100vh;
+			top: -150vh;
 			left: 10vw;
 			width: 80vw;
 			height: 96vh;
@@ -334,12 +334,15 @@
 			text-align: center;
 			z-index: 10;
 			transform: perspective(300px) rotateX(90deg);
-			transition: 0.4s;
+			transition: transform 1s, top 1s;
 		}
 		#close-settings {
 			position: absolute;
 			top: 10px;
 			right: 10px;
+		}
+		#close-settings:active {
+			color: red;
 		}
 		.switch {
 		  position: relative;
@@ -419,9 +422,14 @@
 	<script type="text/javascript">
 		let settingslist = document.querySelector('#settings-box');
 		let settingsBtn = document.querySelector('#settings');
+		let settingsCls = document.querySelector('#close-settings');
 		settingsBtn.addEventListener("click", () => {
 			settingslist.style.top = "2vh";
 			settingslist.style.transform = "perspective(300px) rotateX(0deg)";
+		});
+		settingsBtn.addEventListener("click", () => {
+			settingslist.style.top = "150vh";
+			settingslist.style.transform = "perspective(300px) rotateX(90deg)";
 		});
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
