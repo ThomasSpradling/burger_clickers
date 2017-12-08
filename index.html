@@ -323,7 +323,7 @@
 		
 		#settings-box {
 			position: absolute;
-			top: -150vh;
+			top: 150vh;
 			left: 10vw;
 			width: 80vw;
 			height: 96vh;
@@ -337,6 +337,27 @@
 			transition: transform 1s, top 1s;
 		}
 		#close-settings {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor : pointer;
+		}
+		#stats-box {
+			position: absolute;
+			top: 150vh;
+			left: 10vw;
+			width: 80vw;
+			height: 96vh;
+			background-color: #d19e7b;
+			border: 2px solid #853;
+			padding: 10px;
+			color: white;
+			text-align: center;
+			z-index: 10;
+			transform: perspective(300px) rotateX(90deg);
+			transition: transform 1s, top 1s;
+		}
+		#close-stats {
 			position: absolute;
 			top: 10px;
 			right: 10px;
@@ -412,13 +433,17 @@
 	<div id="settings-box">
 		<h1>Settings/Options</h1>
 		<div id="close-settings" class="fa fa-close fa-3x"></div>
-		<label></label>
+		<label>Something to be done: </label>
 		<label class="switch">
 		  <input type="checkbox" checked>
 		  <span class="slider"></span>
 		</label>
 	</div>
 	<button id="stats" class="fa fa-bar-chart"></button>
+	<div id="stats-box">
+		<h1>Settings/Options</h1>
+		<div id="close-stats" class="fa fa-close fa-3x"></div>
+	</div>
 	<div id="stats-box"></div>
 	<script type="text/javascript">
 		let settingslist = document.querySelector('#settings-box');
@@ -431,6 +456,17 @@
 		settingsCls.addEventListener("click", () => {
 			settingslist.style.top = "150vh";
 			settingslist.style.transform = "perspective(300px) rotateX(90deg)";
+		});
+		let statslist = document.querySelector('#stats-box');
+		let statsBtn = document.querySelector('#stats');
+		let statsCls = document.querySelector('#close-stats');
+		statsBtn.addEventListener("click", () => {
+			statslist.style.top = "2vh";
+			statslist.style.transform = "perspective(300px) rotateX(0deg)";
+		});
+		statsCls.addEventListener("click", () => {
+			statslist.style.top = "150vh";
+			statslist.style.transform = "perspective(300px) rotateX(90deg)";
 		});
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
