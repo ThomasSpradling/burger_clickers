@@ -852,7 +852,12 @@
 			return image;
 		}
 		function addBuild(x, y, name, type, cost, value, storage, description) {
-			let supVal = (localStorage[storage] > 0?1.15:(localStorage[storage] > 50)?1.2:200);
+			let supVal = localStorage[storage] > 500 ? 20:
+				     localStorage[storage] > 400 ? 10:
+			             localStorage[storage] > 300 ? 5:
+				     localStorage[storage] > 200 ? 4:
+				     localStorage[storage] > 100 ? 3:
+				     localStorage[storage] > 50 ? 2:1.15;
 			setInterval(() => {
 				bought.innerHTML = "Owned: " + localStorage[storage]; 
 				buy.innerHTML = "Cost: " + bigNum(Math.floor(cost * Math.pow(supVal, Number(localStorage[storage]))), 2, true);
