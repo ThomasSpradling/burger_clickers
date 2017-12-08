@@ -323,11 +323,16 @@
 		
 		#settings-box {
 			position: absolute;
-			top: 10vh;
+			top: 2vh;
 			left: 10vw;
 			width: 80vw;
-			height: 80vh;
+			height: 96vh;
 			background-color: #d19e7b;
+			border: 2px solid #853;
+			padding: 10px;
+			color: white;
+			text-align: center;
+			z-index: 10;
 		}
 		.switch {
 		  position: relative;
@@ -395,6 +400,7 @@
 	<button id="settings" class="fa fa-gear"></button>
 	<div id="settings-box">
 		<h1>Settings/Options</h1>
+		<label></label>
 		<label class="switch">
 		  <input type="checkbox" checked>
 		  <span class="slider"></span>
