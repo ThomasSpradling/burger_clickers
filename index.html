@@ -9,6 +9,7 @@
 <html>
 <head>
 	<title>Burger Game | Thomas Spradling</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta name="description" content="You know this is the coolest game at your school."/>
 	<meta name="author" content="Thomas Spraddling"/>
 	<meta property="og:title" content="Burger Clickers"/>
@@ -210,7 +211,7 @@
 				darkgreen 10%,
 				lime,
 				rgba(0,0,0,0.6)
-			);*
+			);
 			font-size: 1.4em;
 		}
 		.buy:disabled {
@@ -265,6 +266,19 @@
 		.dmg {
 			color: #666;
 		}
+		#settings {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(
+				rgba(0,0,0,0.7),
+				darkgreen 10%,
+				lime,
+				rgba(0,0,0,0.6)
+			);
+		}
 	</style>
 </head>
 <body>
@@ -282,6 +296,7 @@
 	</div>
 	<div id="click"></div>
 	<span id="auto"></span>
+	<button id="settings"></button>
 	<script type="text/javascript">
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
