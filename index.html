@@ -501,7 +501,7 @@
 		function count() {
 		    clearTimeout(resetTimeoutHandle);
 		    clicks++;
-		    counter.innerText = clicksPerSecond(started, clicks);
+		    counter.innerHTML = clicksPerSecond(started, clicks);
 		    resetTimeoutHandle = setTimeout(reset, resetTimeout);
 		    return false;
 		}
