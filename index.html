@@ -281,6 +281,7 @@
 			cursor: pointer;
 			outline: none;
 			color: white;
+			font-size: 1.5em;
 		}
 		
 		#settings:active {
@@ -290,6 +291,34 @@
 				lime,
 				rgba(0,0,0,0.6)
 			);
+			font-size: 1.3em;
+		}
+		#stats {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			right: 90px;
+			bottom: 20px;
+			background: linear-gradient(
+				white,
+				green 50%,
+				darkgreen 60%,
+				lime
+			);
+			cursor: pointer;
+			outline: none;
+			color: white;
+			font-size: 1.5em;
+		}
+		
+		#stats:active {
+			background: linear-gradient(
+				rgba(0,0,0,0.7),
+				darkgreen 10%,
+				lime,
+				rgba(0,0,0,0.6)
+			);
+			font-size: 1.3em;
 		}
 	</style>
 </head>
@@ -308,7 +337,7 @@
 	</div>
 	<div id="click"></div>
 	<span id="auto"></span>
-	<button id="settings" class="fa fa-gear fa-3x"></button>
+	<button id="settings" class="fa fa-gear"></button>
 	<script type="text/javascript">
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
