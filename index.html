@@ -457,6 +457,7 @@
 	<div id="stats-box">
 		<h1>Statistics/Analysis</h1>
 		<div id="fake-burger"></div>
+		<div id="counter"></div>
 		<div id="close-stats" class="fa fa-close fa-3x"></div>
 	</div>
 	<div id="stats-box"></div>
@@ -483,6 +484,43 @@
 			statslist.style.top = "150vh";
 			statslist.style.transform = "perspective(300px) rotateX(90deg)";
 		});
+		
+		var started, resetTimeoutHandle, resetTimeout = 1000,
+		    counter = document.getElementById('counter'),
+		    zone = document.getElementById('fake-burger'),
+		    clicks = 0;
+
+		zone.onselect = zone.onselectstart = function() {
+		    return false;
+		};
+
+		function clicksPerSecond(started, clicks) {
+		    return clicks / ((new Date()) - started) * 1000;
+		}
+
+		function count() {
+		    clearTimeout(resetTimeoutHandle);
+		    clicks++;
+		    counter.innerText = clicksPerSecond(started, clicks);
+		    resetTimeoutHandle = setTimeout(reset, resetTimeout);
+		    return false;
+		}
+
+		function start() {
+		    started = new Date();
+		    clicks = 0;
+		    counter.style.opacity = 1;
+		    this.onmousedown = count;
+		    this.onmousedown();
+		    return false;
+		}
+
+		function reset() {
+		    zone.onmousedown = start;
+		    counter.style.opacity = 0.3;
+		}
+
+		reset();
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
 		  	var abbr;
