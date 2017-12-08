@@ -852,7 +852,6 @@
 			return image;
 		}
 		function addBuild(x, y, name, type, cost, value, storage, description) {
-			let supVal;
 			let supVal = (localStorage[storage] > 0?1.15:(localStorage[storage] > 50)?1.2:200);
 			setInterval(() => {
 				bought.innerHTML = "Owned: " + localStorage[storage]; 
