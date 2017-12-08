@@ -340,8 +340,9 @@
 			position: absolute;
 			top: 10px;
 			right: 10px;
+			cursor : pointer;
 		}
-		#close-settings:active {
+		#close-settings:active, #close-settings:hover {
 			color: red;
 		}
 		.switch {
@@ -427,7 +428,7 @@
 			settingslist.style.top = "2vh";
 			settingslist.style.transform = "perspective(300px) rotateX(0deg)";
 		});
-		settingsBtn.addEventListener("click", () => {
+		settingsCls.addEventListener("click", () => {
 			settingslist.style.top = "150vh";
 			settingslist.style.transform = "perspective(300px) rotateX(90deg)";
 		});
