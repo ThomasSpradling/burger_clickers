@@ -860,10 +860,10 @@
 				     localStorage[storage] > 50 ? 2:1.15;
 			let decrease = localStorage[storage] > 400 ? 1.0001:
 				     localStorage[storage] > 350 ? 1.001:
-			             localStorage[storage] > 300 ? 1.01:
-				     localStorage[storage] > 200 ? 1.08:
-				     localStorage[storage] > 100 ? 1.10:
-				     localStorage[storage] > 50 ? 1.13:1.15;
+			             localStorage[storage] > 300 ? 1.005:
+				     localStorage[storage] > 200 ? 1.01:
+				     localStorage[storage] > 100 ? 1.04:
+				     localStorage[storage] > 50 ? 1.06:1.07;
 			setInterval(() => {
 				bought.innerHTML = "Owned: " + localStorage[storage]; 
 				buy.innerHTML = "Cost: " + bigNum(Math.floor(cost * Math.pow(supVal, Number(localStorage[storage]))), 2, true);
@@ -922,8 +922,8 @@
 			let nextDmg = 0;
 			setInterval(() => {
 				for(let i = 0; i <= localStorage[storage]; i++) {
-					currentDmg += decrease * Math.pow(1.15, Number(i))*10;
-					nextDmg += decrease * Math.pow(1.15, Number(i + 1))*10;
+					currentDmg += decrease * Math.pow(1.1, Number(i))*10;
+					nextDmg += decrease * Math.pow(1.1, Number(i + 1))*10;
 				}
 
 				extrasList.innerHTML = "<span class='titillo'>"+name+"</span> "+
