@@ -323,7 +323,7 @@
 		
 		#settings-box {
 			position: absolute;
-			top: 2vh;
+			top: -100vh;
 			left: 10vw;
 			width: 80vw;
 			height: 96vh;
@@ -333,6 +333,7 @@
 			color: white;
 			text-align: center;
 			z-index: 10;
+			transition: 0.4s;
 		}
 		.switch {
 		  position: relative;
@@ -409,6 +410,11 @@
 	<button id="stats" class="fa fa-bar-chart"></button>
 	<div id="stats-box"></div>
 	<script type="text/javascript">
+		let settingslist = document.querySelector('#settings-box');
+		let settingsBtn = document.querySelector('#settings');
+		settingsBtn.addEventListener("click", () => {
+			settingslist.style.top = "2vh";
+		});
 		function bigNum(number, maxPlaces, small) {
 		  	number = Math.floor(Number(number));
 		  	var abbr;
