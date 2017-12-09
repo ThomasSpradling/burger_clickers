@@ -435,7 +435,7 @@
 </head>
 <body>
 	<audio autoplay loop>
-	  <source src="krustykrab.m4a" type="audio/mpeg">
+	  <source src="krusty.m4a" type="audio/mpeg" id="music">
 	  	<div class="audio-alt">
 	    	That sucks, that webpage is a lot cooler when you can listen to the noice x-files music along with all else.
 		</div>
@@ -473,11 +473,11 @@
 	</div>
 	<div id="stats-box"></div>
 	<script type="text/javascript">
-		let grayscale = document.querySelector('#grayscale');
-		let inverted = document.querySelector('#inverted');
-		document.body.style.filter = grayscale.checked && inverted.checked ? "saturate(0) invert(100%)":
-		grayscale.checked? "saturate(0)":
-		inverted.checked? "invert(100%)":"saturate(100) invert(0)";
+		function rnd(min, max) {
+		    return Math.floor(Math.random() * (max - min + 1) ) + min;
+		}
+		let randomNumber = rnd(0,1);
+		document.querySelector("#music").src = randomNumber?"krustykrab.mp4":"krusty.mp4";
 		
 		let settingslist = document.querySelector('#settings-box');
 		let settingsBtn = document.querySelector('#settings');
