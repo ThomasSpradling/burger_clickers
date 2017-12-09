@@ -431,6 +431,32 @@
 		label {
 			font-size: 1.5em;
 		}
+		#reset {
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			right: 90px;
+			bottom: 20px;
+			background: linear-gradient(
+				white,
+				green 50%,
+				darkgreen 60%,
+				lime
+			);
+			cursor: pointer;
+			outline: none;
+			color: white;
+			font-size: 2em;
+		}
+		#reset:active {
+			background: linear-gradient(
+				rgba(0,0,0,0.7),
+				darkgreen 10%,
+				lime,
+				rgba(0,0,0,0.6)
+			);
+			font-size: 1.8em;
+		}
 	</style>
 </head>
 <body>
@@ -453,11 +479,7 @@
 		  <span class="slider"></span>
 		</label>
 		
-		<label>Grayscale: </label>
-		<label class="switch">
-		  <input type="checkbox" id="grayscale">
-		  <span class="slider"></span>
-		</label>
+		<button id="reset" onclick="if(confirm("Are you sure you want this?")) {localStorage.clear(); localStorage.score = 0;}">Reset Entire Game</button>
 	</div>
 	<button id="stats" class="fa fa-bar-chart"></button>
 	<div id="stats-box">
