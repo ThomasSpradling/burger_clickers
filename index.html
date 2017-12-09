@@ -477,7 +477,7 @@
 		let inverted = document.querySelector('#inverted');
 		document.body.style.filter = grayscale.checked && inverted.checked ? "saturate(0) invert(100%)":
 		grayscale.checked? "saturate(0)":
-		inverted.checked? "invert(100%)":;
+		inverted.checked? "invert(100%)":"saturate(100) invert(0)";
 		
 		let settingslist = document.querySelector('#settings-box');
 		let settingsBtn = document.querySelector('#settings');
