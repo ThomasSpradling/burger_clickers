@@ -988,6 +988,9 @@
 
 		
 		setInterval(() => {
+			if(!localStorage.score) {
+				localStorage.score = 0;
+			}
 			score.innerHTML = bigNum(localStorage.score, 2, false);
 			burger.onclick = () => {
 				localStorage.score = Number(localStorage.score) + Number(localStorage.click);
