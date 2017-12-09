@@ -331,7 +331,6 @@
 			border: 2px solid #853;
 			padding: 10px;
 			color: white;
-			text-align: center;
 			z-index: 10;
 			transform: perspective(300px) rotateX(90deg);
 			transition: transform 1s, top 1s;
@@ -355,10 +354,13 @@
 			border: 2px solid #853;
 			padding: 10px;
 			color: white;
-			text-align: center;
 			z-index: 10;
 			transform: perspective(300px) rotateX(90deg);
 			transition: transform 1s, top 1s;
+			font-size: 2em;
+		}
+		h1 {
+			text-align: center;
 		}
 		#close-stats {
 			position: absolute;
@@ -426,6 +428,9 @@
 		#fake-burger:active {
 			background: url('Images/clicked.png');
 		}
+		label {
+			font-size: 1.5em;
+		}
 	</style>
 </head>
 <body>
@@ -447,9 +452,15 @@
 	<div id="settings-box">
 		<h1>Settings/Options</h1>
 		<div id="close-settings" class="fa fa-close fa-3x"></div>
-		<label>Something to be done: </label>
+		<label>Inverted: </label>
 		<label class="switch">
-		  <input type="checkbox" checked>
+		  <input type="checkbox" id="inverted">
+		  <span class="slider"></span>
+		</label>
+		
+		<label>Grayscale: </label>
+		<label class="switch">
+		  <input type="checkbox" id="grayscale">
 		  <span class="slider"></span>
 		</label>
 	</div>
@@ -462,6 +473,12 @@
 	</div>
 	<div id="stats-box"></div>
 	<script type="text/javascript">
+		let grayscale = document.querySelector('#grayscale');
+		let inverted = document.querySelector('#inverted');
+		document.body.style.filter = grayscale.checked && inverted.checked ? "saturate(0) invert(100%)":
+		grayscale.checked? "saturate(0)":
+		inverted.checked? "invert(100%)":;
+		
 		let settingslist = document.querySelector('#settings-box');
 		let settingsBtn = document.querySelector('#settings');
 		let settingsCls = document.querySelector('#close-settings');
