@@ -1,0 +1,58 @@
+#score-box {
+	width: 100%;
+	height: 50px;
+		background: -o-linear-gradient(
+			white 0%,
+			rgb(255, 227, 178) 50%,
+			#d19e7b 50%,
+			rgb(255, 227, 178)
+		);
+		background: -moz-linear-gradient(
+			white 0%,
+			rgb(255, 227, 178) 50%,
+			#d19e7b 50%,
+			rgb(255, 227, 178)
+		);
+		background: -webkit-linear-gradient(
+			white 0%,
+			rgb(255, 227, 178) 50%,
+			#d19e7b 50%,
+			rgb(255, 227, 178)
+		);
+	background: linear-gradient(
+		white 0%,
+		rgb(255, 227, 178) 50%,
+		#d19e7b 50%,
+		rgb(255, 227, 178)
+	);
+	display: flex;
+	margin: 0px auto 10px auto;
+	border: 2px solid #853;
+	border-radius: 20%;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+#score-box:before, #score-box:after {
+	content: "";
+	position: absolute;
+	border: 15px solid transparent;
+	top: 20%;
+}
+#score-box:before {	
+	left: 0;
+	border-left-color: #853;
+}
+#score-box:after {
+	right: 0;
+	border-right-color: #853;
+}
+
+#score {
+	color: white;
+	font-size: 2em;
+	text-shadow: 1px 1px 0 #853, -1px -1px 0 #853;
+}
+#score:after {
+	content: " Burgers";
+}

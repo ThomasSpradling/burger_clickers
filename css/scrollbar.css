@@ -1,0 +1,86 @@
+::-webkit-scrollbar {
+		background: -o-linear-gradient(
+			to right,
+			transparent 10%,
+			#d19e7b 10%,
+			#a5845c	
+		);
+		background: -moz-linear-gradient(
+			to right,
+			transparent 10%,
+			#d19e7b 10%,
+			#a5845c	
+		);
+		background: -webkit-linear-gradient(
+			to right,
+			#d19e7b 0%,
+			rgb(255, 227, 178) 10%,
+			#d19e7b 10%,
+			rgb(255, 227, 178)
+		);
+	background: linear-gradient(
+		to right,
+		#d19e7b 0%,
+		rgb(255, 227, 178) 10%,
+		#d19e7b 10%,
+		rgb(255, 227, 178)
+	);
+}
+::-webkit-scrollbar-thumb {
+		background: -o-linear-gradient(
+			to right,
+			transparent 10%,
+			#d19e7b 10%,
+			#a5845c	
+		);
+		background: -moz-linear-gradient(
+			to right,
+			transparent 10%,
+			#d19e7b 10%,
+			#a5845c	
+		);
+		background: -webkit-linear-gradient(
+			to right,
+			transparent 10%,
+			#d19e7b 10%,
+			#a5845c	
+		);
+	background: linear-gradient(
+		to right,
+		transparent 10%,
+		#d19e7b 10%,
+		#a5845c	
+	);
+		-moz-box-shadow: 3.5px 2px 5px rgba(0,0,0,0.5);
+		-webkit-box-shadow: 3.5px 2px 5px rgba(0,0,0,0.5);
+	box-shadow: 3.5px 2px 5px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:active {
+		background: -o-linear-gradient(
+			to right,
+			transparent 10%,
+			#a5845c 10%,
+			#896d4b	
+		);
+		background: -moz-linear-gradient(
+			to right,
+			transparent 10%,
+			#a5845c 10%,
+			#896d4b	
+		);
+		background: -webkit-linear-gradient(
+			to right,
+			transparent 10%,
+			#a5845c 10%,
+			#896d4b	
+		);
+	background: linear-gradient(
+		to right,
+		transparent 10%,
+		#a5845c 10%,
+		#896d4b	
+	);
+		-moz-box-shadow: 3.5px 2px 5px rgba(0,0,0,0.7);
+		-webkit-box-shadow: 3.5px 2px 5px rgba(0,0,0,0.7);
+	box-shadow: 3.5px 2px 5px rgba(0,0,0,0.7);
+}
