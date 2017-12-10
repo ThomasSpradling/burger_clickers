@@ -59,7 +59,17 @@ let clk = [
 	clickValue[2].click,
 	clickValue[3].click,
 	clickValue[4].click,
-	clickValue[5].click
+	clickValue[5].click,
+	clickValue[6].click,
+	clickValue[7].click,
+	clickValue[8].click,
+	clickValue[9].click,
+	clickValue[10].click,
+	clickValue[11].click,
+	clickValue[12].click,
+	clickValue[13].click,
+	clickValue[14].click,
+	clickValue[15].click
 ];
 let aut = [
 	clickValue[0].auto,
@@ -67,7 +77,18 @@ let aut = [
 	clickValue[2].auto,
 	clickValue[3].auto,
 	clickValue[4].auto,
-	clickValue[5].auto
+	clickValue[5].auto,
+	clickValue[6].auto,
+	clickValue[7].auto,
+	clickValue[8].auto,
+	clickValue[9].auto,
+	clickValue[10].auto,
+	clickValue[11].auto,
+	clickValue[12].auto,
+	clickValue[13].auto,
+	clickValue[14].auto,
+	clickValue[15].auto
+
 ];
 setInterval(() => {
 	clk = [
@@ -76,7 +97,17 @@ setInterval(() => {
 		clickValue[2].click,
 		clickValue[3].click,
 		clickValue[4].click,
-		clickValue[5].click
+		clickValue[5].click,
+		clickValue[6].click,
+		clickValue[7].click,
+		clickValue[8].click,
+		clickValue[9].click,
+		clickValue[10].click,
+		clickValue[11].click,
+		clickValue[12].click,
+		clickValue[13].click,
+		clickValue[14].click,
+		clickValue[15].click
 	];
 	aut = [
 		clickValue[0].auto,
@@ -84,7 +115,17 @@ setInterval(() => {
 		clickValue[2].auto,
 		clickValue[3].auto,
 		clickValue[4].auto,
-		clickValue[5].auto
+		clickValue[5].auto,
+		clickValue[6].auto,
+		clickValue[7].auto,
+		clickValue[8].auto,
+		clickValue[9].auto,
+		clickValue[10].auto,
+		clickValue[11].auto,
+		clickValue[12].auto,
+		clickValue[13].auto,
+		clickValue[14].auto,
+		clickValue[15].auto
 	];
 },10);
 function start() {
