@@ -75,6 +75,7 @@
 	text-shadow: 1px 1px 0 #853, -1px -1px 0 #853;
 	left: 84px;
 	top: 5px;
+	font-family: "Hot Pizza";
 }
 .build .buy {
 	position: absolute;
@@ -155,6 +156,8 @@
 }
 .titillo {
 	font-size: 30px;
+	font-family: "Hot Pizza";
+	left: 5px;
 }
 .dmg {
 	color: #666;
