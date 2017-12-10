@@ -4,9 +4,13 @@
 	box-sizing: border-box;
 	user-select: none;
 }
+@font-face {
+	font-family: "Hot Pizza";
+	src: url("../hotpizza.ttf");
+}
 body {
 	padding: 20px;
-	font-family: arial, sans-serif;
+	font-family: "Hot Pizza";
 	overflow: hidden;
 	background: #920000;
 	background: url("../Images/flag.gif");
