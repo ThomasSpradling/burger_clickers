@@ -10,7 +10,7 @@
 }
 body {
 	padding: 20px;
-	font-family: "Hot Pizza";
+	font-family: arial, sans-serif;
 	overflow: hidden;
 	background: #920000;
 	background: url("../Images/flag.gif");
