@@ -1,3 +1,3 @@
 # Burger Clickers v1.0.3
-* Code By Thomas Spradling
-Hope you enjoy; Burger Clickers is my first little game, mostly for practicing stuff. Based lightly off of the concept of [I'm an inline-style link](http://orteil.dashnet.org/cookieclicker/). Any pull requests and issues are more than welcome because believe me, I know that issues are going to be a major factor in this. Anyhow, 12 people who play, enjoy. :)
+Code By Thomas Spradling
+Hope you enjoy; Burger Clickers is my first little game, mostly for practicing stuff. Based lightly off of the concept of [Cookie Clickers](http://orteil.dashnet.org/cookieclicker/). Any pull requests and issues are more than welcome because believe me, I know that issues are going to be a major factor in this. Anyhow, 12 people who play, enjoy. :)
